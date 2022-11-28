@@ -1,0 +1,44 @@
+'pt-BR':
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+      city:
+        one: Cidade
+        other: Cidades
+      city_info:
+        one: Informação de cidade
+        other: Informação de cidades
+    attributes: 
+      user:
+        email: Email
+        password: Senha
+        created_at: Criado em
+        updated_at: Atualizado em
+      city:
+        id: ID
+        name: Nome
+        state: Estado
+        pop1991: População de 1991
+        pop2000: População de 2000
+        pop2010: População de 2010
+        created_at: Criado em
+        updated_at: Atualizado em
+      city_info:
+        coef_rsu_per_capita: Coeficiente per capita de RSU
+        coef_metal_ferroso: Coeficiente de Metal Ferroso
+        coef_metal_nao_ferroso: Coeficiente de Metal Não Ferroso
+        coef_plastico_filme: Coeficiente de Plástico Filme
+        coef_plastico_rigido: Coeficiente de Plástico Rígido
+        coef_papel_papelao: Coeficiente de Papel/Papelão
+        coef_vidro: Coeficiente de Vidro
+        price_metal_ferroso: Preço do Metal Ferroso
+        price_metal_nao_ferroso: Preço do Metal Não Ferroso
+        price_plastico_filme: Preço do Plástico Filme
+        price_plastico_rigido: Preço do Plástico Rígido
+        price_papel_papelao: Preço do Papel/Papelão
+        price_vidro: Preço do Vidro
+        created_at: Criado em
+        updated_at: Atualizado em
+

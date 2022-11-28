@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: one
+  coef_rsu_per_capita: 1.5
+  coef_metal_ferroso: 1.5
+  coef_metal_nao_ferroso: 1.5
+  coef_plastico_filme: 1.5
+  coef_plastico_rigido: 1.5
+  coef_papel_papelao: 1.5
+  coef_vidro: 1.5
+  price_metal_ferroso: 1.5
+  price_metal_nao_ferroso: 1.5
+  price_plastico_filme: 1.5
+  price_plastico_rigido: 1.5
+  price_papel_papelao: 1.5
+  price_vidro: 1.5
+
+two:
+  city: two
+  coef_rsu_per_capita: 1.5
+  coef_metal_ferroso: 1.5
+  coef_metal_nao_ferroso: 1.5
+  coef_plastico_filme: 1.5
+  coef_plastico_rigido: 1.5
+  coef_papel_papelao: 1.5
+  coef_vidro: 1.5
+  price_metal_ferroso: 1.5
+  price_metal_nao_ferroso: 1.5
+  price_plastico_filme: 1.5
+  price_plastico_rigido: 1.5
+  price_papel_papelao: 1.5
+  price_vidro: 1.5

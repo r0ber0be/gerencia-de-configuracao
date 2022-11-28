@@ -1,0 +1,62 @@
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800"><%= @cities.model.human_attribute_name(:city) %></h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+      class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+  </div>
+  <!-- Table List all Cities -->
+  <div class="container-fluid">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th><%= translate(@cities, :id) %></th>
+                <th><%= translate(@cities, :name) %></th>
+                <th><%= translate(@cities, :state) %></th>
+                <th><%= translate(@cities, :pop1991) %></th>
+                <th><%= translate(@cities, :pop2000) %></th>
+                <th><%= translate(@cities, :pop2010)%></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @cities.each do |city| %>
+                <tr>
+                  <td><%= city.id %></td>
+                  <td><%= city.name %></td>
+                  <td><%= city.state %></td>
+                  <td><%= city.pop1991 %></td>
+                  <td><%= city.pop2000 %></td>
+                  <td><%= city.pop2010 %></td>
+                  <td style="width: 120px; max-width: 140px">
+                    <%= link_to edit_city_path(city), class:"btn btn-primary btn-circle" do %>
+                      <i class="fa fa-edit"></i>
+                    <% end %>
+                    <%= link_to city_path(city), :method => :delete, class:"btn btn-danger btn-circle" do %>
+                      <i class="fa fa-minus"></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center">
+          <%= paginate @cities %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /.container-fluid -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>

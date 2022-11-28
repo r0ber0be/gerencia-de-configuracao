@@ -1,0 +1,103 @@
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Info to Cidade</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+      class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+  </div>
+
+  <div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">  
+          <div class="col-lg-12">
+            <div class="p-5">    
+            <!---Add new city form--->
+              <%= form_with(model: [ @city_info ], data: { turbo_confirm: 'Os dados estão corretos?'}) do |form|%>
+                <div class="form-group row">
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :city_id, class:"text-dark" %></b>
+                    <%= form.select(:city_id, @all_cities, { include_blank: false }, class: "form-select") %>
+                  </div>
+
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :coef_rsu_per_capita, class:"text-dark" %></b>
+                    <%= form.number_field :coef_rsu_per_capita, class:"form-control", id:"coef_rsu_per_capita", required:"true", placeholder:"Coef Rsu Per Capita"%>
+                  </div>
+                  <div class="col-sm-4">
+                    <b><%= form.label :coef_metal_ferroso, class:"text-dark" %></b>
+                    <%= form.number_field :coef_metal_ferroso, class:"form-control", id:"coef_metal_ferroso", required:"true", placeholder:"Coef Metal Ferroso"%>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :coef_metal_nao_ferroso, class:"text-dark" %></b>
+                    <%= form.number_field :coef_metal_nao_ferroso, class:"form-control", id:"coef_metal_nao_ferroso", required:"true",  placeholder:"coef_metal_nao_ferroso" %>
+                  </div>
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :coef_plastico_filme, class:"text-dark" %></b>
+                    <%= form.number_field :coef_plastico_filme, class:"form-control", id:"coef_plastico_filme", required:"true",  placeholder:"coef_plastico_filme" %>
+                  </div>
+                  <div class="col-sm-4">
+                    <b><%= form.label :coef_plastico_rigido, class:"text-dark" %></b>
+                    <%= form.number_field :coef_plastico_rigido, class:"form-control", id:"coef_plastico_rigido", required:"true",  placeholder:"coef_plastico_rigido" %>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :coef_papel_papelao, class:"text-dark" %></b>
+                    <%= form.number_field :coef_papel_papelao, class:"form-control", id:"coef_papel_papelao", required:"true",  placeholder:"coef_papel_papelao" %>
+                  </div>
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :coef_vidro, class:"text-dark" %></b>
+                    <%= form.number_field :coef_vidro, class:"form-control", id:"coef_vidro", required:"true",  placeholder:"coef_vidro" %>
+                  </div>
+                  <div class="col-sm-4">
+                    <b><%= form.label :price_metal_ferroso, class:"text-dark" %></b>
+                    <%= form.number_field :price_metal_ferroso, class:"form-control", id:"price_metal_ferroso", required:"true",  placeholder:"price_metal_ferroso" %>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :price_metal_nao_ferroso, class:"text-dark" %></b>
+                    <%= form.number_field :price_metal_nao_ferroso, class:"form-control", id:"price_metal_nao_ferroso", required:"true",  placeholder:"price_metal_nao_ferroso" %>
+                  </div>
+                  <div class="col-sm-4 mb-3 mb-sm-0">
+                    <b><%= form.label :price_plastico_filme, class:"text-dark" %></b>
+                    <%= form.number_field :price_plastico_filme, class:"form-control", id:"price_plastico_filme", required:"true",  placeholder:"price_plastico_filme" %>
+                  </div>
+                  <div class="col-sm-4">
+                    <b><%= form.label :price_plastico_rigido, class:"text-dark" %></b>
+                    <%= form.number_field :price_plastico_rigido, class:"form-control", id:"price_plastico_rigido", required:"true",  placeholder:"price_plastico_rigido" %>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <b><%= form.label :price_papel_papelao, class:"text-dark" %></b>
+                    <%= form.number_field :price_papel_papelao, class:"form-control", id:"price_papel_papelao", required:"true", placeholder:"price_papel_papelao"%>
+                  </div>
+                  <div class="col-sm-6">
+                    <b><%= form.label :price_vidro, class:"text-dark" %></b>
+                    <%= form.number_field :price_vidro, class:"form-control", id:"price_vidro", required:"true", placeholder:"price_vidro"%>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-city btn-block">Register CityInfo</button>
+              <% end %>
+            <!---Add new city form-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>

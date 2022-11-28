@@ -1,0 +1,28 @@
+version: '2.0'
+
+services:
+  postgres:
+    container_name: smart_recycle_postgres
+    build: ./postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres:/postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: senha123
+
+  smart_recycle:
+    container_name: smart_recycle
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/smart_recycle/
+    depends_on:
+      - postgres
