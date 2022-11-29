@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class City < ApplicationRecord
   has_one :city_info
   accepts_nested_attributes_for :city_info

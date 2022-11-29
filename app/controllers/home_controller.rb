@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HomeController < ApplicationController
   include HomeHelper
 
@@ -15,32 +17,32 @@ class HomeController < ApplicationController
       title: 'Server Migration',
       progress: 20,
       isFinished: false,
-      color: 'bg-danger',
+      color: 'bg-danger'
     },
-    {
-      title: 'Sales Tracking',
-      progress: 40,
-      isFinished: false,
-      color: 'bg-warning',
-    },
-    {
-      title: 'Customer Database',
-      progress: 60,
-      isFinished: false,
-      color: 'bg-info',
-    },
-    {
-      title: 'Payout Details',
-      progress: 40,
-      isFinished: false,
-      color: 'bg-primary',
-    },
-    {
-      title: 'Account Setup',
-      progress: 100,
-      isFinished: true,
-      color: 'bg-success',
-    }
+                 {
+                   title: 'Sales Tracking',
+                   progress: 40,
+                   isFinished: false,
+                   color: 'bg-warning'
+                 },
+                 {
+                   title: 'Customer Database',
+                   progress: 60,
+                   isFinished: false,
+                   color: 'bg-info'
+                 },
+                 {
+                   title: 'Payout Details',
+                   progress: 40,
+                   isFinished: false,
+                   color: 'bg-primary'
+                 },
+                 {
+                   title: 'Account Setup',
+                   progress: 100,
+                   isFinished: true,
+                   color: 'bg-success'
+                 }
 
     @earnings = {
       deposits: 290.29
@@ -54,7 +56,7 @@ class HomeController < ApplicationController
         title: 'Custos com RSU',
         value: '$2.070.000',
         color: 'warning',
-        icon: 'fa-dollar-sign',
+        icon: 'fa-dollar-sign'
       }
   end
 end

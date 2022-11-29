@@ -79,7 +79,11 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.9.2, < 3)
       sassc-rails (>= 2.0.0)
+    brakeman (5.4.0)
     builder (3.2.4)
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     capybara (3.36.0)
       addressable
       matrix
@@ -135,6 +139,7 @@ GEM
     kaminari-i18n (0.5.0)
       kaminari
       rails
+    libv8 (3.16.14.19-x86_64-linux)
     loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -212,6 +217,7 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    ref (2.0.0)
     regexp_parser (2.2.1)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -233,7 +239,13 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.21.0)
       parser (>= 3.1.1.0)
+    rubocop-rails (2.17.3)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.11.0)
+    ruby_audit (2.1.0)
+      bundler-audit (~> 0.9.0)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -258,6 +270,9 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.1)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.2.0)
@@ -291,9 +306,12 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 5.0.2)
+  brakeman
+  bundler-audit
   capybara
   debug
   devise
+  execjs
   importmap-rails
   jbuilder
   kaminari
@@ -304,11 +322,14 @@ DEPENDENCIES
   rails (~> 7.0.2, >= 7.0.2.3)
   rails-i18n (~> 7.0.0)
   requestjs-rails
-  rubocop (~> 1.36)
+  rubocop
+  rubocop-rails
+  ruby_audit
   selenium-webdriver
   spring
   sprockets-rails
   stimulus-rails
+  therubyracer
   turbo-rails
   tzinfo-data
   web-console

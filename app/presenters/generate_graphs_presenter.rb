@@ -20,6 +20,7 @@ class GenerateGraphsPresenter
 
   def data_pie_chart
     return unless @city.present?
+
     {
       type: 'doughnut',
       labels: %w[1991 2000 2010],
