@@ -316,7 +316,7 @@ DEPENDENCIES
   jbuilder
   kaminari
   kaminari-i18n
-  pg
+  pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
