@@ -19,6 +19,10 @@ jobs:
     env:
       RAILS_ENV: test
       DATABASE_URL: "localhost"
+    container: 
+      image: composer:latest
+      volumes:
+        - ${{ github.workspace }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
