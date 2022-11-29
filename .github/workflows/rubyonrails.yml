@@ -28,6 +28,8 @@ jobs:
         with:
           bundler-cache: true
       # Add or replace database setup steps here
+      - name: Set up Docker
+        run: docker-compose build
       - name: Integration tests
         run: docker-compose up --exit-code-from docker exec -it smart_recycle bash bundle exec rake
       #- name: Set up database schema
