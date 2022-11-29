@@ -19,6 +19,8 @@ jobs:
     env:
       RAILS_ENV: test
       DATABASE_URL: "localhost"
+    container: 
+      image: gerencia-de-configuracao_smart_recycle:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
