@@ -31,7 +31,7 @@ jobs:
       - name: Set up Docker
         run: docker-compose build
       - name: Integration tests
-        run: docker-compose up -d docker exec -it smart_recycle bash bundle exec rake
+        run: docker-compose up -d exec -it smart_recycle bash bundle exec rake
       #- name: Set up database schema
       #  run: bin/rails db:schema:load
 
