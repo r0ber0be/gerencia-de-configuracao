@@ -29,6 +29,7 @@ jobs:
           bundler-cache: true
       # Add or replace database setup steps here
       - name: Set up database schema
+        run: docker-compose up
         run: bin/rails db:schema:load
       # Add or replace test runners here
       - name: Run tests
