@@ -12,7 +12,7 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 gem 'sprockets-rails'
 
 # Use PostgreSQL as the database for Active Record
-gem 'pg', '~> 1.1'
+#gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -77,9 +77,11 @@ group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit'
   gem 'ruby_audit'
+  # Database
+  gem 'pg'
   # Linting
-  gem 'rubocop'
   gem 'rubocop-rails'
+  gem 'rubocop'
 end
 
 group :development do
