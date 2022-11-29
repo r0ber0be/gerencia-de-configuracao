@@ -29,7 +29,7 @@ jobs:
           bundler-cache: true
       # Add or replace database setup steps here
       - name: Docker initialization
-        run: docker-compose up
+        run: [docker-compose up, docker exec -it smart_recycle bash, rails test]
       - name: Set up database schema
         run: bin/rails db:schema:load
       # Add or replace test runners here
