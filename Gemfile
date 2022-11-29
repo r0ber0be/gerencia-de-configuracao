@@ -77,10 +77,10 @@ group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit'
   gem 'ruby_audit'
-  
+
   # Linting
+  gem 'rubocop', require: false
   gem 'rubocop-rails'
-  gem 'rubocop'
 end
 
 group :development do

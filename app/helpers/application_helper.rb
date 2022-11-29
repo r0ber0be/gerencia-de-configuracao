@@ -26,7 +26,7 @@ module ApplicationHelper
     rsu_ton_day.each do |t|
       rsu_growth.push(t * 365)
     end
-    Hash[years.zip(rsu_growth)]
+    years.zip(rsu_growth).to_h
   end
 
   def vidro_ton_day
@@ -124,7 +124,7 @@ module ApplicationHelper
   end
 
   def total_potential_to_hash
-    Hash[years.zip(total_economic_potential)]
+    years.zip(total_economic_potential).to_h
   end
 
   # CUSTO ??
@@ -137,7 +137,7 @@ module ApplicationHelper
         daily_rsu.push(rsu_value * (constant / 100))
       end
     end
-    Hash[years.zip(daily_rsu)]
+    years.zip(daily_rsu).to_h
   end
 
   def calculates_ton_rsu_per_year(array_rsu)
@@ -147,7 +147,7 @@ module ApplicationHelper
         rsu_year.push(rsu_day[1] * 365)
       end
     end
-    Hash[years.zip(rsu_year)]
+    years.zip(rsu_year).to_h
   end
 
   def calculates_rsu_year_potential(rsu_ton_year, price)
@@ -157,6 +157,6 @@ module ApplicationHelper
         gravimetria_rsu.push(price * 1000 * rsu[1]) # 0.08 é o preço
       end
     end
-    Hash[years.zip(gravimetria_rsu)]
+    years.zip(gravimetria_rsu).to_h
   end
 end

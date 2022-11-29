@@ -20,13 +20,13 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "should not save without name" do
+  test 'should not save without name' do
     @user.name = ''
-    assert_not @user.save, "Saved the user without a name"
+    assert_not @user.save, 'Saved the user without a name'
   end
 
-  test "should save user with a name" do
-    assert @user.save, "User with a name was saved sucessfully"
+  test 'should save user with a name' do
+    assert @user.save, 'User with a name was saved sucessfully'
   end
 
   test 'user name should not have more than 80 characters' do
